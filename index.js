@@ -1,6 +1,6 @@
 const fs = require("fs");
 const Discord = require("discord.js");
-const { prefix, token } = require("./json/config.json");
+const { prefix, token, adminRole } = require("./json/config.json");
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -24,10 +24,10 @@ client.on("message", async (message) => {
 
   var args = message.content.slice(prefix.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
-
+	console.log(commandName);
   try {
     adminRole = await message.guild.roles.cache.find(
-      (role) => role.name == "Mods"
+      (role) => role.name == adminRole
     );
     if (
       client.commands.get(commandName).admin &&

@@ -13,10 +13,12 @@ module.exports = {
 	}
 	if (member.id == message.member.id) {
 		message.delete();
-		return message.reply("You can't ban yourself, silly!");
+		return message.reply("You can't kick yourself, silly!");
+
 	} else if (await !member.kickable) {
 		message.delete();
 		return message.reply(args[0] + " cannot be kicked!");
+		
 	} else {
 		try {
 		await member.send(

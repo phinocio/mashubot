@@ -2,7 +2,7 @@ module.exports = {
   name: "ban",
   title: "Ban User",
   description: "Summons the almighty banhammer!",
-  help: "ban [@username] [reason]",
+  help: "ban [@username|id] [reason]",
   admin: true,
   async execute(message, args, Discord, fs, commandFiles, prefix, client) {
     let member = undefined;

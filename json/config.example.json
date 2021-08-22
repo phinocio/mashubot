@@ -1,5 +1,5 @@
 {
 	"prefix": "!",
 	"token": "change-me",
-	"admin-role": "Admin role name"
+	"adminRole": "Admin role name"
 }

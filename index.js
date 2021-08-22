@@ -26,12 +26,12 @@ client.on("message", async (message) => {
   const commandName = args.shift().toLowerCase();
 	console.log(commandName);
   try {
-    adminRole = await message.guild.roles.cache.find(
+    admin = await message.guild.roles.cache.find(
       (role) => role.name == adminRole
     );
     if (
       client.commands.get(commandName).admin &&
-      !message.member.roles.cache.has(adminRole.id) &&
+      !message.member.roles.cache.has(admin.id) &&
       !message.member.hasPermission("ADMINISTRATOR")
     )
       return message.reply("You do not have permission to use that command!");

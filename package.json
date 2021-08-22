@@ -4,11 +4,15 @@
   "description": "Discord bot for RingComics server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"watch": "nodemon --watch '**/*.js' --ignore 'src/**/*.spec.js' --exec 'node' index.js"
   },
   "author": "RingComics",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
